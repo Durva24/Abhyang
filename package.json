@@ -1,0 +1,12 @@
+{
+  "name": "abhyang",
+  "version": "1.0.0",
+  "description": "Abhyanga — The Ritual Bar",
+  "main": "main.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o"
+  },
+  "keywords": ["abhyanga", "ritual", "soap"],
+  "author": "",
+  "license": "ISC"
+}
