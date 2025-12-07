@@ -11,7 +11,7 @@
 
   <style>
     /* -----------------------------------------------------------
-       DESIGN TOKENS
+       DESIGN TOKENS - Minimal Green Palette
        ----------------------------------------------------------- */
     :root {
       --color-primary: #2D4A3E;      /* Deep Forest Green */
@@ -35,7 +35,11 @@
     /* -----------------------------------------------------------
        RESET & GLOBAL
        ----------------------------------------------------------- */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: var(--font-sans);
@@ -43,7 +47,6 @@
       color: var(--color-text);
       line-height: 1.6;
       font-size: 15px;
-      overflow-x: hidden;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -78,7 +81,7 @@
     }
 
     /* -----------------------------------------------------------
-       HEADER
+       HEADER - Minimal & Clean
        ----------------------------------------------------------- */
     header {
       background-color: var(--color-bg);
@@ -95,8 +98,12 @@
       align-items: center;
     }
 
-    .header-left { display: flex; align-items: center; gap: 24px; }
-    
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
     .search-box {
       display: flex;
       align-items: center;
@@ -113,7 +120,11 @@
       letter-spacing: -0.5px;
     }
 
-    .header-right { display: flex; align-items: center; gap: 20px; }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
     .icon-btn {
       background: none;
@@ -123,10 +134,16 @@
       font-size: 18px;
       padding: 4px;
     }
-    .icon-btn:hover { color: var(--color-primary); }
 
-    .nav-bar { border-top: 1px solid var(--color-border); }
-    
+    .icon-btn:hover {
+      color: var(--color-primary);
+    }
+
+    /* Navigation */
+    .nav-bar {
+      border-top: 1px solid var(--color-border);
+    }
+
     .nav-links {
       display: flex;
       justify-content: center;
@@ -140,26 +157,27 @@
       font-size: 14px;
       color: var(--color-text);
       font-weight: 400;
+      position: relative;
     }
-    .nav-links a:hover { color: var(--color-primary); }
+    
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
 
     /* -----------------------------------------------------------
-       HERO SECTION - NEW STYLES (from second code block)
+       HERO SECTION - Large Image with Text Overlay
        ----------------------------------------------------------- */
     .hero {
       position: relative;
       height: 520px;
       background-color: var(--color-bg-alt);
       overflow: hidden;
-      display: flex; /* Added for content centering */
-      align-items: center; /* Added for content centering */
-      justify-content: center; /* Added for content centering */
     }
 
     .hero-image {
       width: 100%;
       height: 100%;
-      background:
+      background: 
         radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
         radial-gradient(circle at 40% 80%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
@@ -170,8 +188,8 @@
       justify-content: center;
       position: relative;
     }
-    
-    /* Ingredient Elements (Bokeh Style) */
+
+    /* Ingredient Elements */
     .ingredient-bokeh {
       position: absolute;
       border-radius: 50%;
@@ -186,130 +204,207 @@
     }
 
     .ingredient-1 {
-      top: 10%; left: 8%; width: 80px; height: 80px;
+      top: 10%;
+      left: 8%;
+      width: 80px;
+      height: 80px;
       background: radial-gradient(circle, #f4e4c1 30%, transparent 70%);
       animation-delay: 0s;
     }
 
     .ingredient-1::after {
-      content: '🍯'; position: absolute; font-size: 32px;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(0);
+      content: '🍯';
+      position: absolute;
+      font-size: 32px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
     }
 
     .ingredient-2 {
-      top: 20%; right: 12%; width: 100px; height: 100px;
+      top: 20%;
+      right: 12%;
+      width: 100px;
+      height: 100px;
       background: radial-gradient(circle, #a8d5ba 30%, transparent 70%);
       animation-delay: 1s;
     }
 
     .ingredient-2::after {
-      content: '🌿'; position: absolute; font-size: 38px;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(0);
+      content: '🌿';
+      position: absolute;
+      font-size: 38px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
     }
 
     .ingredient-3 {
-      bottom: 15%; left: 15%; width: 90px; height: 90px;
+      bottom: 15%;
+      left: 15%;
+      width: 90px;
+      height: 90px;
       background: radial-gradient(circle, #e8c5d8 30%, transparent 70%);
       animation-delay: 2s;
     }
 
     .ingredient-3::after {
-      content: '🌹'; position: absolute; font-size: 34px;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(0);
+      content: '🌹';
+      position: absolute;
+      font-size: 34px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
     }
 
     .ingredient-4 {
-      bottom: 25%; right: 10%; width: 85px; height: 85px;
+      bottom: 25%;
+      right: 10%;
+      width: 85px;
+      height: 85px;
       background: radial-gradient(circle, #d4e8dc 30%, transparent 70%);
       animation-delay: 0.5s;
     }
 
     .ingredient-4::after {
-      content: '🌱'; position: absolute; font-size: 32px;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(0);
+      content: '🌱';
+      position: absolute;
+      font-size: 32px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
     }
 
     .ingredient-5 {
-      top: 50%; left: 5%; width: 70px; height: 70px;
+      top: 50%;
+      left: 5%;
+      width: 70px;
+      height: 70px;
       background: radial-gradient(circle, #c9b5a0 30%, transparent 70%);
       animation-delay: 1.5s;
     }
 
     .ingredient-5::after {
-      content: '🏔️'; /* Representing Multani Mitti / Earth */
-      position: absolute; font-size: 28px;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(0);
+      content: '🏔️';
+      position: absolute;
+      font-size: 28px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
     }
 
     .ingredient-6 {
-      top: 35%; right: 8%; width: 75px; height: 75px;
-      background: radial-gradient(circle, #2C3633 30%, transparent 70%); /* Dark color for charcoal */
+      top: 35%;
+      right: 8%;
+      width: 75px;
+      height: 75px;
+      background: radial-gradient(circle, #a8d5ba 30%, transparent 70%);
       animation-delay: 2.5s;
     }
 
     .ingredient-6::after {
-      content: '⚫'; /* Representing Charcoal */
-      position: absolute; font-size: 30px;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(0);
+      content: '🧪';
+      position: absolute;
+      font-size: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
     }
-    
+
+    .ingredient-7 {
+      bottom: 40%;
+      left: 25%;
+      width: 65px;
+      height: 65px;
+      background: radial-gradient(circle, #e8f3ed 30%, transparent 70%);
+      animation-delay: 3s;
+    }
+
+    .ingredient-7::after {
+      content: '🌵';
+      position: absolute;
+      font-size: 26px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
+    }
+
+    .ingredient-8 {
+      top: 60%;
+      right: 25%;
+      width: 78px;
+      height: 78px;
+      background: radial-gradient(circle, #333333 30%, transparent 70%);
+      animation-delay: 1.8s;
+    }
+
+    .ingredient-8::after {
+      content: '⚫';
+      position: absolute;
+      font-size: 32px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(0);
+    }
+
     .hero-content {
       text-align: center;
-      color: var(--color-primary); /* Changed to primary color for visibility on light BG */
-      z-index: 10;
+      color: var(--color-primary);
+      z-index: 2;
       position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px 60px;
+      border-radius: 4px;
+      backdrop-filter: blur(10px);
     }
 
     .hero-subtitle {
-      font-size: 13px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      font-weight: 400;
       color: var(--color-secondary);
     }
 
     .hero-title {
       font-size: 52px;
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 32px;
       color: var(--color-primary);
       line-height: 1.2;
     }
-    
-    .hero-desc {
-        font-size: 16px;
-        color: var(--color-text);
-        max-width: 600px;
-        margin: 0 auto 32px;
+
+    /* -----------------------------------------------------------
+       SECTION HEADERS
+       ----------------------------------------------------------- */
+    .section-header {
+      text-align: center;
+      padding: 60px 0 40px;
     }
 
-    .hero-btn {
-      display: inline-block;
-      padding: 14px 36px;
-      background-color: var(--color-primary);
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 13px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    
-    .hero-btn:hover {
-      background-color: var(--color-secondary);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(45, 74, 62, 0.2);
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--color-primary);
     }
 
     /* -----------------------------------------------------------
-       CATEGORY GRID (Keep original styles)
+       CATEGORY GRID - Shop by Category
        ----------------------------------------------------------- */
-    .category-section { padding: 40px 0 80px; background-color: var(--color-bg); }
-    .section-header { text-align: center; padding: 60px 0 40px; }
-    .section-header h2 { font-size: 32px; font-weight: 500; margin-bottom: 8px; color: var(--color-primary); }
+    .category-section {
+      padding: 40px 0 80px;
+      background-color: var(--color-bg);
+    }
 
     .category-grid {
       display: grid;
@@ -327,48 +422,98 @@
       border: 1px solid var(--color-border);
       background-color: var(--color-bg-alt);
     }
-    .category-card:hover { box-shadow: 0 4px 12px rgba(45, 74, 62, 0.1); }
+
+    .category-card:hover {
+      box-shadow: 0 4px 12px rgba(45, 74, 62, 0.1);
+    }
 
     .category-image {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-serif); font-size: 18px; color: var(--color-primary);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--color-primary);
       background-color: var(--color-light-green);
     }
-    
-    /* Simulate different soap colors if images fail */
-    .category-card:nth-child(1) .category-image { background-color: #E6DCCD; } 
-    .category-card:nth-child(2) .category-image { background-color: #DDE8DF; } 
-    .category-card:nth-child(3) .category-image { background-color: #D3DCD6; } 
-    .category-card:nth-child(4) .category-image { background-color: #E2E2E2; } 
+
+    .category-card:nth-child(1) .category-image { background-color: #F0E9E0; }
+    .category-card:nth-child(2) .category-image { background-color: #E8F3ED; }
+    .category-card:nth-child(3) .category-image { background-color: #EEE8E0; }
+    .category-card:nth-child(4) .category-image { background-color: #E5EBE8; }
+    .category-card:nth-child(5) .category-image { background-color: #F3EDE8; }
+    .category-card:nth-child(6) .category-image { background-color: #E9F0EC; }
 
     .category-overlay {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 16px; background: white; text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      background: white;
+      text-align: center;
       border-top: 1px solid var(--color-border);
     }
-    .category-name { font-size: 14px; font-weight: 600; color: var(--color-primary); }
 
-    /* -----------------------------------------------------------
-       FEATURES (Keep original styles)
-       ----------------------------------------------------------- */
-    .features { padding: 60px 0; background-color: var(--color-light-green); }
-    .features-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 60px; max-width: 1000px; margin: 0 auto;
+    .category-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary);
     }
-    .feature-item { text-align: center; }
-    .feature-icon { font-size: 36px; margin-bottom: 16px; display: block; }
-    .feature-item h3 { font-size: 18px; margin-bottom: 8px; font-weight: 500; }
-    .feature-item p { font-size: 14px; color: var(--color-text-light); line-height: 1.6; }
 
     /* -----------------------------------------------------------
-       PRODUCTS (Keep original styles)
+       FEATURES - Minimal 3 Column
        ----------------------------------------------------------- */
-    .products-section { padding: 80px 0; background-color: var(--color-bg); }
+    .features {
+      padding: 60px 0;
+      background-color: var(--color-light-green);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature-item {
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .feature-item h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .feature-item p {
+      font-size: 14px;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------------
+       PRODUCTS GRID
+       ----------------------------------------------------------- */
+    .products-section {
+      padding: 80px 0;
+      background-color: var(--color-bg);
+    }
+
     .products-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px; margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
     }
 
     .product-card {
@@ -376,235 +521,397 @@
       border: 1px solid var(--color-border);
       transition: var(--transition);
     }
-    .product-card:hover { box-shadow: 0 4px 16px rgba(45, 74, 62, 0.08); }
+
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(45, 74, 62, 0.08);
+    }
 
     .product-image {
       height: 340px;
       background-color: var(--color-bg-alt);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--color-secondary); border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--color-secondary);
+      border-bottom: 1px solid var(--color-border);
     }
 
-    .product-info { padding: 20px; }
-    .product-title { font-size: 16px; font-weight: 500; margin-bottom: 6px; color: var(--color-primary); }
-    .product-desc { font-size: 13px; color: var(--color-text-light); margin-bottom: 16px; line-height: 1.5; }
-    .product-footer {
-      display: flex; justify-content: space-between; align-items: center;
-      padding-top: 12px; border-top: 1px solid var(--color-border);
+    .product-image.img-1 { background-color: #F0E9E0; }
+    .product-image.img-2 { background-color: #E8F3ED; }
+    .product-image.img-3 { background-color: #EEE8E0; }
+
+    .product-info {
+      padding: 20px;
     }
-    .price { font-weight: 600; color: var(--color-primary); font-size: 16px; }
+
+    .product-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--color-primary);
+    }
+
+    .product-desc {
+      font-size: 13px;
+      color: var(--color-text-light);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .price {
+      font-weight: 600;
+      color: var(--color-primary);
+      font-size: 16px;
+    }
 
     .add-btn {
-      padding: 8px 20px; font-size: 12px; text-transform: uppercase;
-      letter-spacing: 0.5px; font-weight: 600; color: var(--color-primary);
-      background: transparent; border: 1px solid var(--color-primary);
-      cursor: pointer; transition: var(--transition);
+      padding: 8px 20px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: transparent;
+      border: 1px solid var(--color-primary);
+      cursor: pointer;
+      transition: var(--transition);
     }
-    .add-btn:hover { background: var(--color-primary); color: white; }
+
+    .add-btn:hover {
+      background: var(--color-primary);
+      color: white;
+    }
 
     /* -----------------------------------------------------------
-       STORY (Keep original styles)
+       STORY BANNER
        ----------------------------------------------------------- */
-    .story-banner { background-color: var(--color-primary); color: white; padding: 80px 0; }
-    .story-content { max-width: 800px; margin: 0 auto; text-align: center; }
-    .story-content h2 { font-size: 36px; margin-bottom: 24px; color: white; font-weight: 500; }
-    .story-content p { font-size: 16px; line-height: 1.8; margin-bottom: 20px; color: rgba(255, 255, 255, 0.9); }
+    .story-banner {
+      background-color: var(--color-primary);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .story-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .story-content h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .story-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
     .story-btn {
-      margin-top: 32px; padding: 12px 32px; font-size: 13px;
-      text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
-      color: white; background: transparent; border: 2px solid white;
-      cursor: pointer; transition: var(--transition);
+      margin-top: 32px;
+      padding: 12px 32px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: white;
+      background: transparent;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: var(--transition);
     }
-    .story-btn:hover { background: white; color: var(--color-primary); }
+
+    .story-btn:hover {
+      background: white;
+      color: var(--color-primary);
+    }
 
     /* -----------------------------------------------------------
-       FOOTER (Keep original styles)
+       FOOTER
        ----------------------------------------------------------- */
-    footer { background-color: var(--color-bg-alt); padding: 60px 0 30px; border-top: 1px solid var(--color-border); }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-col h4 {
-      font-family: var(--font-sans); text-transform: uppercase; font-size: 12px;
-      letter-spacing: 1px; margin-bottom: 20px; color: var(--color-primary); font-weight: 600;
+    footer {
+      background-color: var(--color-bg-alt);
+      padding: 60px 0 30px;
+      border-top: 1px solid var(--color-border);
     }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a { font-size: 14px; color: var(--color-text-light); }
-    .footer-col ul li a:hover { color: var(--color-primary); }
-    .footer-col p { font-size: 14px; color: var(--color-text-light); line-height: 1.6; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 14px;
+      color: var(--color-text-light);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--color-primary);
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--color-border);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
 
     .newsletter-btn {
-      width: 100%; padding: 10px; background: var(--color-primary); color: white;
-      border: none; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
-      cursor: pointer; font-weight: 600; transition: var(--transition); margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
     }
-    .newsletter-btn:hover { background: var(--color-secondary); }
-    .copyright { text-align: center; font-size: 13px; padding-top: 30px; border-top: 1px solid var(--color-border); color: var(--color-text-light); }
 
-    /* Mobile */
+    .newsletter-btn:hover {
+      background: var(--color-secondary);
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 13px;
+      padding-top: 30px;
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-light);
+    }
+
+    /* -----------------------------------------------------------
+       RESPONSIVE
+       ----------------------------------------------------------- */
     @media(max-width: 768px) {
-      .nav-links { gap: 20px; font-size: 13px; }
-      .hero-title { font-size: 36px; }
-      .hero { height: 450px; }
-      .ingredient-bokeh { transform: scale(0.7); } /* Smaller icons on mobile */
-      .category-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+      .nav-links {
+        gap: 20px;
+        font-size: 13px;
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-banner">Free local delivery for orders over ₹999</div>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    Free local delivery for orders over ₹999
+  </div>
 
+  <!-- Header -->
   <header>
     <div class="container">
       <div class="header-main">
         <div class="header-left">
-          <div class="search-box"><span>🔍</span><span>Search</span></div>
+          <div class="search-box">
+            <span>🔍</span>
+          </div>
         </div>
+
         <a href="#" class="logo">Abhyanga</a>
+
         <div class="header-right">
-          <button class="icon-btn">♡</button>
-          <button class="icon-btn">👤</button>
-          <button class="icon-btn">🛒</button>
+          <button class="icon-btn" aria-label="Wishlist">♡</button>
+          <button class="icon-btn" aria-label="Account">👤</button>
+          <button class="icon-btn" aria-label="Cart">🛒</button>
         </div>
       </div>
     </div>
+
     <nav class="nav-bar">
       <div class="container">
         <div class="nav-links">
-          <a href="#new">New In</a>
-          <a href="#shop">Shop All Soaps</a>
-          <a href="#about">Our Story</a>
-          <a href="#rituals">Why Ayurvedic</a>
+          <a href="#new">New</a>
+          <a href="#shop">Shop</a>
+          <a href="#about">Story</a>
+          <a href="#rituals">Ayurvedic</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-image">
+      <!-- Floating Ingredient Bokeh Elements -->
       <div class="ingredient-bokeh ingredient-1"></div>
       <div class="ingredient-bokeh ingredient-2"></div>
       <div class="ingredient-bokeh ingredient-3"></div>
       <div class="ingredient-bokeh ingredient-4"></div>
       <div class="ingredient-bokeh ingredient-5"></div>
       <div class="ingredient-bokeh ingredient-6"></div>
+      <div class="ingredient-bokeh ingredient-7"></div>
+      <div class="ingredient-bokeh ingredient-8"></div>
       
       <div class="hero-content">
         <p class="hero-subtitle">Ayurvedic Artisan Skincare</p>
         <h1 class="hero-title">Natural Wellness,<br>Handcrafted Care</h1>
-        <p class="hero-desc">Experience the purity of nature with traditional recipes for balanced, healthy skin.</p>
-        <button class="hero-btn" onclick="document.getElementById('shop').scrollIntoView();">Explore Collection</button>
       </div>
     </div>
   </section>
 
+  <!-- Shop by Category -->
   <section class="category-section">
     <div class="container">
-      <div class="section-header"><h2>Our Soap Collection</h2></div>
+      <div class="section-header">
+        <h2>Our Soap Collection</h2>
+      </div>
+
       <div class="category-grid">
         <div class="category-card" onclick="openWhatsApp('All in One Soap')">
-          <div class="category-image">
-            <img src="images/abhyang_all-in-one.png" alt="All in One" onerror="this.style.display='none'">
+          <div class="category-image">All in One</div>
+          <div class="category-overlay">
+            <div class="category-name">All in One Soap</div>
           </div>
-          <div class="category-overlay"><div class="category-name">All in One Soap</div></div>
         </div>
+
         <div class="category-card" onclick="openWhatsApp('Aloe Vera Soap')">
-          <div class="category-image">
-             <img src="images/aloevera.jpg" alt="Aloe Vera" onerror="this.style.display='none'">
+          <div class="category-image">Aloe Vera</div>
+          <div class="category-overlay">
+            <div class="category-name">Aloe Vera Soap</div>
           </div>
-          <div class="category-overlay"><div class="category-name">Aloe Vera Soap</div></div>
         </div>
+
         <div class="category-card" onclick="openWhatsApp('Neem Soap')">
-          <div class="category-image">
-             <img src="images/neem.jpg" alt="Neem" onerror="this.style.display='none'">
+          <div class="category-image">Neem</div>
+          <div class="category-overlay">
+            <div class="category-name">Neem Soap</div>
           </div>
-          <div class="category-overlay"><div class="category-name">Neem Soap</div></div>
         </div>
+
         <div class="category-card" onclick="openWhatsApp('Charcoal Soap')">
-          <div class="category-image">
-             <img src="images/charcoal.jpg" alt="Charcoal" onerror="this.style.display='none'">
+          <div class="category-image">Charcoal</div>
+          <div class="category-overlay">
+            <div class="category-name">Charcoal Soap</div>
           </div>
-          <div class="category-overlay"><div class="category-name">Charcoal Soap</div></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Features -->
   <section class="features">
     <div class="container">
       <div class="features-grid">
         <div class="feature-item">
           <span class="feature-icon">🌿</span>
           <h3>Ayurvedic Formulas</h3>
-          <p>Ancient wisdom meets modern skincare with botanicals that balance and nourish.</p>
+          <p>Ancient wisdom meets modern skincare with botanicals that balance and nourish</p>
         </div>
         <div class="feature-item">
           <span class="feature-icon">✋</span>
           <h3>Handcrafted Quality</h3>
-          <p>Small-batch production ensures every bar meets our exacting standards.</p>
+          <p>Small-batch production ensures every bar meets our exacting standards</p>
         </div>
         <div class="feature-item">
           <span class="feature-icon">♻️</span>
           <h3>Sustainable Choice</h3>
-          <p>Zero plastic packaging and earth-conscious ingredients from start to finish.</p>
+          <p>Zero plastic packaging and earth-conscious ingredients from start to finish</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Products Grid -->
   <section class="products-section" id="shop">
     <div class="container">
-      <div class="section-header"><h2>Featured Products</h2></div>
+      <div class="section-header">
+        <h2>Featured Products</h2>
+      </div>
+
       <div class="products-grid">
         <article class="product-card">
-          <div class="product-image">
-            <img src="images/abhyang_all-in-one.png" alt="All in One Soap" onerror="this.style.display='none'">
-          </div>
+          <div class="product-image img-1">All in One</div>
           <div class="product-info">
             <h3 class="product-title">All in One Soap</h3>
-            <p class="product-desc">Complete care with heritage oils and botanicals.</p>
+            <p class="product-desc">Complete care with heritage oils and botanicals for balanced, healthy skin</p>
             <div class="product-footer">
               <span class="price">₹399</span>
-              <button class="add-btn" onclick="openWhatsApp('All in One Soap')">Add</button>
+              <button class="add-btn" onclick="openWhatsApp('All in One Soap')">Add to Cart</button>
             </div>
           </div>
         </article>
+
         <article class="product-card">
-          <div class="product-image">
-             <img src="images/aloevera.jpg" alt="Aloe Vera Soap" onerror="this.style.display='none'">
-          </div>
+          <div class="product-image img-2">Aloe Vera</div>
           <div class="product-info">
             <h3 class="product-title">Aloe Vera Soap</h3>
-            <p class="product-desc">Cooling aloe extract calms inflammation naturally.</p>
+            <p class="product-desc">Cooling aloe extract calms inflammation and soothes sun-exposed skin naturally</p>
             <div class="product-footer">
               <span class="price">₹399</span>
-              <button class="add-btn" onclick="openWhatsApp('Aloe Vera Soap')">Add</button>
+              <button class="add-btn" onclick="openWhatsApp('Aloe Vera Soap')">Add to Cart</button>
             </div>
           </div>
         </article>
+
         <article class="product-card">
-          <div class="product-image">
-             <img src="images/neem.jpg" alt="Neem Soap" onerror="this.style.display='none'">
-          </div>
+          <div class="product-image img-3">Neem</div>
           <div class="product-info">
             <h3 class="product-title">Neem Soap</h3>
-            <p class="product-desc">Purifying neem extracts cleanse deeply.</p>
+            <p class="product-desc">Purifying neem extracts cleanse deeply while maintaining skin's natural balance</p>
             <div class="product-footer">
               <span class="price">₹399</span>
-              <button class="add-btn" onclick="openWhatsApp('Neem Soap')">Add</button>
+              <button class="add-btn" onclick="openWhatsApp('Neem Soap')">Add to Cart</button>
             </div>
           </div>
         </article>
+
         <article class="product-card">
-          <div class="product-image">
-             <img src="images/charcoal.jpg" alt="Charcoal Soap" onerror="this.style.display='none'">
-          </div>
+          <div class="product-image img-1">Charcoal</div>
           <div class="product-info">
             <h3 class="product-title">Charcoal Soap</h3>
-            <p class="product-desc">Activated charcoal draws out impurities.</p>
+            <p class="product-desc">Activated charcoal draws out impurities and detoxifies for clear, refreshed skin</p>
             <div class="product-footer">
               <span class="price">₹399</span>
-              <button class="add-btn" onclick="openWhatsApp('Charcoal Soap')">Add</button>
+              <button class="add-btn" onclick="openWhatsApp('Charcoal Soap')">Add to Cart</button>
             </div>
           </div>
         </article>
@@ -612,17 +919,19 @@
     </div>
   </section>
 
+  <!-- Story Banner -->
   <section class="story-banner" id="about">
     <div class="container">
       <div class="story-content">
         <h2>The Art of Slow Skincare</h2>
         <p>Abhyanga refers to the ancient Ayurvedic practice of self-massage with warm oil—a daily ritual of reverence for the body. We've captured this essence in every handcrafted bar.</p>
-        <p>Each soap is cured for six weeks, cut by hand, and wrapped in sustainable materials.</p>
-        <button class="story-btn" onclick="openWhatsApp('Learn more about story')">Read Our Story</button>
+        <p>Each soap is cured for six weeks, cut by hand, and wrapped in sustainable materials. No machines, no shortcuts. Just honest ingredients and intention.</p>
+        <button class="story-btn" onclick="openWhatsApp('Learn more')">Read Our Story</button>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -630,34 +939,43 @@
           <h4>Abhyanga</h4>
           <p>Ancient wisdom for modern bodies. Handcrafted in India with love and intention.</p>
         </div>
+        
         <div class="footer-col">
           <h4>Shop</h4>
           <ul>
             <li><a href="#" onclick="openWhatsApp('All Products')">All Products</a></li>
             <li><a href="#" onclick="openWhatsApp('New Arrivals')">New Arrivals</a></li>
             <li><a href="#" onclick="openWhatsApp('Gift Sets')">Gift Sets</a></li>
+            <li><a href="#" onclick="openWhatsApp('Bulk Orders')">Bulk Orders</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Support</h4>
           <ul>
-            <li><a href="#" onclick="openWhatsApp('Shipping')">Shipping</a></li>
+            <li><a href="#" onclick="openWhatsApp('Shipping')">Shipping & Returns</a></li>
+            <li><a href="#" onclick="openWhatsApp('FAQ')">FAQ</a></li>
             <li><a href="#" onclick="openWhatsApp('Ingredients')">Ingredients</a></li>
             <li><a href="#" onclick="openWhatsApp('Contact')">Contact Us</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Stay Connected</h4>
           <p style="margin-bottom: 16px;">Get updates on new releases and rituals</p>
           <button class="newsletter-btn" onclick="openWhatsApp('Subscribe')">Subscribe via WhatsApp</button>
         </div>
       </div>
-      <div class="copyright">© 2025 Abhyanga Skincare. All rights reserved.</div>
+      
+      <div class="copyright">
+        © 2025 Abhyanga Skincare. All rights reserved.
+      </div>
     </div>
   </footer>
 
   <script>
-    const WHATSAPP_NUMBER = "9198XXXXXXXX"; 
+    const WHATSAPP_NUMBER = "918928301294"; 
+
     function openWhatsApp(text) {
       const encodedText = encodeURIComponent(text);
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
